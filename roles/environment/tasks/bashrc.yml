@@ -1,0 +1,7 @@
+---
+
+- name: add a new string at the end of the file
+  lineinfile: dest=/etc/bashrc
+              regexp=''
+              insertafter=EOF
+              line='set -o vi'

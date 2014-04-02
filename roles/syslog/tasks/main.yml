@@ -1,0 +1,7 @@
+---
+
+- include: install_rpm.yml
+  when: ansible_distribution in [ 'CentOS', 'RedHat', 'Fedora' ]
+
+- name: Syslog | Start service
+  service: name=syslog state=started enabled=yes

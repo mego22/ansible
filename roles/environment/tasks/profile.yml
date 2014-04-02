@@ -1,0 +1,6 @@
+---
+
+- name: remove the line 'unset i'
+  lineinfile: dest=/etc/profile
+              regexp='^unset i'
+              state=absent

@@ -1,0 +1,4 @@
+---
+
+- name: Syslog | Installing
+  yum: name=rsyslog state=latest

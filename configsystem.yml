@@ -1,0 +1,13 @@
+# Setup server
+# Usage:
+#    $ ansible-playbook configserver.yml -e "hosts=nodes"
+#
+
+---
+- hosts: $hosts
+  sudo: True
+  user: citrusleaf
+  gather_facts: True
+  roles:
+    - environment
+    - syslog
